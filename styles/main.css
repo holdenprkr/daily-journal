@@ -1,0 +1,41 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, .85);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
+  color: rgba(255, 255, 255, .85);
+}
+
+#conceptsLabel {
+  margin-top: 15px;
+}
+
+.question {
+  float: right; 
+  display: flex;
+  color: rgba(0, 0, 0, .7);
+  font-family: 'Lobster', cursive;
+}
+
+h4 {
+  justify-content: right;
+  font-size: 50px;
+}
+
+@media (max-width:1100px) {
+  h4 {
+    display: none;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Daily Journal</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <h1>Holden's Daily Journal</h1>
+
+  <form class="was-validated">
+    <div class="mb-3">
+      <span class="question">
+        <h4>How was today?</h4>
+      </span>
+      <fieldset>
+        <label for="datepicker">Date:</label>
+        <input id="datepicker" width="276" required />
+        <script>
+          $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+          });
+        </script>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAddress" id="conceptsLabel">Concepts:</label>
+      <input type="text" class="form-control" placeholder="Concepts covered" required>
+    </div>
+
+    <label for="validationTextarea">Journal:</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required journal entry"
+      required></textarea>
+    <!-- <div class="invalid-feedback">
+              Please enter a message in the textarea.
+            </div> -->
+
+    <div class="form-group">
+      <label for="mood">Mood:</label>
+      <select class="custom-select" required>
+        <option selected disabled hidden value="">How did you feel about today?</option>
+        <option value="1">Satisfied</option>
+        <option value="2">Content</option>
+        <option value="3">Frustrated</option>
+        <option value="4">Confused</option>
+        <option value="5">Angry</option>
+        <option value="6">Hopeful</option>
+        <option value="7">Stressed</option>
+        <option value="8">Bored</option>
+        <option value="9">Sad</option>
+        <option value="10">Happy</option>
+      </select>
+      <div class="invalid-feedback">Please select a mood</div>
+    </div>
+
+    <button type="button" class="btn btn-primary">Record Journal Entry</button>
+    </fieldset>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
