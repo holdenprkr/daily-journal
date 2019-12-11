@@ -9,6 +9,7 @@
   background: rgba(255, 255, 255, .85);
   padding: 10px;
   border-radius: 20px;
+  overflow-wrap: break-word;
 }
 
 hr.style-five {
