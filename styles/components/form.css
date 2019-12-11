@@ -1,0 +1,29 @@
+form {
+  width: 60%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, .85);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#conceptsLabel {
+  margin-top: 15px;
+}
+
+.question {
+  float: right; 
+  display: flex;
+  color: rgba(0, 0, 0, .7);
+  font-family: 'Lobster', cursive;
+}
+
+.howAreYou {
+  justify-content: right;
+  font-size: 50px;
+}
+
+@media (max-width:700px) {
+  .howAreYou {
+    display: none;
+  }
+}

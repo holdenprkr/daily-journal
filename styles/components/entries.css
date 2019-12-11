@@ -1,0 +1,18 @@
+.allJournalEntries {
+  color: rgba(0, 0, 0, .8);;
+  width: 50%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.journalEntry {
+  background: rgba(255, 255, 255, .85);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+hr.style-five {
+  border: 0;
+  height: 0; /* Firefox... */
+  box-shadow: 0 0 10px 1px black;
+}
