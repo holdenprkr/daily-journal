@@ -15,62 +15,17 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
+  <main id="mainContainer">
+    <h1 class="header">Holden's Daily Journal</h1>
 
-  <h1 class="header">Holden's Daily Journal</h1>
+    <form class="was-validated" id="entryForm"></form>
 
-  <form class="was-validated">
-    <div class="mb-3">
-      <span class="question">
-        <h4 class="howAreYou">How was today?</h4>
-      </span>
-      <fieldset>
-        <label for="datepicker">Date:</label>
-        <input id="datepicker" width="276" required />
-        <script>
-          $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-          });
-        </script>
-    </div>
-
-    <div class="form-group">
-      <label for="inputAddress" id="conceptsLabel">Concepts:</label>
-      <input type="text" class="form-control" placeholder="Concepts covered" required>
-    </div>
-
-    <label for="validationTextarea">Journal:</label>
-    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required journal entry"
-      required></textarea>
-    <!-- <div class="invalid-feedback">
-              Please enter a message in the textarea.
-            </div> -->
-
-    <div class="form-group">
-      <label for="mood">Mood:</label>
-      <select class="custom-select" required>
-        <option selected disabled hidden value="">How did you feel about today?</option>
-        <option value="1">Satisfied</option>
-        <option value="2">Content</option>
-        <option value="3">Frustrated</option>
-        <option value="4">Confused</option>
-        <option value="5">Angry</option>
-        <option value="6">Hopeful</option>
-        <option value="7">Stressed</option>
-        <option value="8">Bored</option>
-        <option value="9">Sad</option>
-        <option value="10">Happy</option>
-      </select>
-      <div class="invalid-feedback">Please select a mood</div>
-    </div>
-
-    <button type="button" class="btn btn-primary">Record Journal Entry</button>
-    </fieldset>
-  </form>
-
-  <article id="entryLog"></article>
+    <article id="entryLog"></article>
+  </main>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
