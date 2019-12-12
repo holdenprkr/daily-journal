@@ -6,6 +6,13 @@
       "entry": "Managed to get my local json API working for my journal entry page and am excited to finally be able to use my daily journal for what it's used for! Referenced a lot of our code from glassdale project but am happy that I was able to get this working on my own time.",
       "mood": "Satisfied",
       "id": 1
+    },
+    {
+      "concept": "App state synching and revisited dialog boxes",
+      "date": "12/11/2019",
+      "entry": "App state is somewhat confusing to me when trying to achieve it myself but I get the concept and understand why it's super important for moving forward as it plays a huge role in what allows pages to be interactive and follow CRUD guidelines. I was glad I revisited applying dialog buttons for glassdale as it was a good refresher and learned a few cool things trying to achieve the layout I wanted including how to write the .map method inside my criminal component which I thought was interesting.",
+      "mood": "Content",
+      "id": 2
     }
   ]
 }

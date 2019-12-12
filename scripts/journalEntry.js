@@ -10,6 +10,7 @@ const JournalEntryComponent = (entry) => {
         <h6>${entry.date}</h6>
         <p>${entry.entry}</p>
         <h6>Mood of the day: ${entry.mood}</h6>
+        <button class="btn btn-dark deleteButton" id="deleteEntry--${entry.id}">Delete</button>
       </section>
       <hr/>
   `
