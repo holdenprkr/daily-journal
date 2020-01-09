@@ -22,8 +22,34 @@ form {
   font-size: 50px;
 }
 
+.btn-group-toggle {
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.radioButton {
+  margin: 5px;
+  border-radius: 15px !important;
+}
+
 @media (max-width:700px) {
   .howAreYou {
     display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .btn-group-toggle {
+    width: 500px;
+  }
+}
+@media (max-width: 1000px) {
+  .btn-group-toggle {
+    width: 350px;
+  }
+}
+@media (max-width: 750px) {
+  .btn-group-toggle {
+    width: 250px;
   }
 }

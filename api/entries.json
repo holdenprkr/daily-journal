@@ -4,15 +4,82 @@
       "concept": "Local json API",
       "date": "12/10/2019",
       "entry": "Managed to get my local json API working for my journal entry page and am excited to finally be able to use my daily journal for what it's used for! Referenced a lot of our code from glassdale project but am happy that I was able to get this working on my own time.",
-      "mood": "Satisfied",
+      "moodId": 1,
       "id": 1
     },
     {
       "concept": "App state synching and revisited dialog boxes",
       "date": "12/11/2019",
       "entry": "App state is somewhat confusing to me when trying to achieve it myself but I get the concept and understand why it's super important for moving forward as it plays a huge role in what allows pages to be interactive and follow CRUD guidelines. I was glad I revisited applying dialog buttons for glassdale as it was a good refresher and learned a few cool things trying to achieve the layout I wanted including how to write the .map method inside my criminal component which I thought was interesting.",
-      "mood": "Content",
+      "moodId": 2,
       "id": 2
+    },
+    {
+      "concept": "Adding delete buttons and custom event functionality",
+      "date": "12/12/2019",
+      "entry": "Today I added delete buttons to notes on the Glassdale project and on journal entries in my Daily Journal. It was cool to see and use another fetch method with our json API. I learned a lot messing around with my glassdale buttons trying to get them interact a certain way in certain scenarios and am happy I was able to finally get them all working how I like at the moment. Joe showed me how I could use a custom event dispatch to re-use a function assigned to it from another page which still is somewhat confusing to me but it works!",
+      "moodId": 6,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "concept": "Got to see Cohort 36's front-end capstone projects",
+      "date": "Edited 1/9/2020",
+      "entry": "It was interesting seeing capstone projects one of our first days in class and then seeing them now as they seemed a lot less intimidating having a lot more knowledge on coding. When seeing cohort 35's projects, it seemed like a lot to figure out how to do from scratch in such a short amount of time but now I have much more confidence thinking about taking on the challenge soon.",
+      "moodId": 8
+    },
+    {
+      "concept": "ERDs",
+      "date": "1/9/2020",
+      "entry": "Yesterday we went over entity relational diagrams for the first time and although somewhat overwhelming they make a lot of sense and I can see why they'd be practical while dealing with your own data. db diagram is a really useful tool to help visualize how all the data you're dealing with interacts.",
+      "moodId": 1,
+      "id": 5
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "mood": "Satisfied"
+    },
+    {
+      "id": 2,
+      "mood": "Content"
+    },
+    {
+      "id": 3,
+      "mood": "Frustrated"
+    },
+    {
+      "id": 4,
+      "mood": "Confused"
+    },
+    {
+      "id": 5,
+      "mood": "Angry"
+    },
+    {
+      "id": 6,
+      "mood": "Hopeful"
+    },
+    {
+      "id": 7,
+      "mood": "Stressed"
+    },
+    {
+      "id": 8,
+      "mood": "Bored"
+    },
+    {
+      "id": 9,
+      "mood": "Sad"
+    },
+    {
+      "id": 10,
+      "mood": "Happy"
+    },
+    {
+      "id": 11,
+      "mood": "Eager"
     }
   ]
 }
