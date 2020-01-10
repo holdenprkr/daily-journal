@@ -15,13 +15,12 @@ const EntryListComponent = () => {
   eventHub.addEventListener("click", event => {
     if (event.target.id.startsWith("label--")) {
         const [notUsed, moodId] = event.target.id.split("--")
-        filteredEntries = entries.filter(entry => {
+        filteredEntries = useEntries().filter(entry => {
           if (parseInt(moodId, 10) === entry.moodId)
           return moodId
         })
       }
-      getEntries()       
-      .then(() => render(filteredEntries))
+      render(filteredEntries)
 })
 
   eventHub.addEventListener("entryHasBeenEdited", e => {
