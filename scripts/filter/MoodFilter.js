@@ -22,7 +22,3 @@ const MoodFilter = () => {
 }
 
 export default MoodFilter
-
-// <label for="journalDate">Mood for the day</label>
-// <select name="mood" id="mood">
-// </select>

@@ -47,7 +47,7 @@ const EntryFormComponent = () => {
         document.getElementById("entryForm").reset()
         document.querySelector("#entryId").value = ""
       } else {
-        //  clickEvent.preventDefault()
+
 
         // Make a new object representation of a note
         const newEntry = {
@@ -93,10 +93,14 @@ const EntryFormComponent = () => {
           <div class="invalid-feedback">Please select a mood</div>
         </div>
 
-        <div class="filters"></div>
- 
+        
         <button id="submit" type="button" class="btn btn-primary">Record Journal Entry</button>
-      </form>`
+        </form>
+        
+        <div class="filter_options">
+          <div class="radio_buttons"></div>
+          <div class="search_bar"></div>
+        </div>`
   }
   render()
 }

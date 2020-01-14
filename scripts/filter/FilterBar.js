@@ -7,7 +7,7 @@ import MoodFilter from "./MoodFilter.js"
 
 
 export const FilterBar = () => {
-  const contentTarget = document.querySelector(".filters")
+  const contentTarget = document.querySelector(".radio_buttons")
     const render = () => {
         contentTarget.innerHTML = `
             ${MoodFilter()}

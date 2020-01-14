@@ -1,5 +1,5 @@
 import JournalEntryComponent from "./journalEntry.js";
-import { useEntries, deleteEntry, getEntries } from "./journalDataProvider.js";
+import { useEntries, deleteEntry } from "./journalDataProvider.js";
 import { useMoods } from "../mood/moodDataProvider.js";
 
 // DOM reference to where all entries will be rendered
@@ -11,17 +11,31 @@ const EntryListComponent = () => {
   const entries = useEntries()
   const allMoods = useMoods()
 
-  let filteredEntries = null
+  
+  eventHub.addEventListener("searchInitiated", e => {
+    let SearchedEntries = []
+    const searchValue = e.detail.SearchBarValue
+    for (const entry of entries) {
+      for (const value of Object.values(entry)) {
+        if (String(value).toLowerCase().includes(searchValue.toLowerCase())) {
+          SearchedEntries.push(entry)
+        }
+      }
+    }
+    render(SearchedEntries)
+  })
+
+  let filteredEntries = []
   eventHub.addEventListener("click", event => {
     if (event.target.id.startsWith("label--")) {
-        const [notUsed, moodId] = event.target.id.split("--")
-        filteredEntries = useEntries().filter(entry => {
-          if (parseInt(moodId, 10) === entry.moodId)
+      const [notUsed, moodId] = event.target.id.split("--")
+      filteredEntries = useEntries().filter(entry => {
+        if (parseInt(moodId, 10) === entry.moodId)
           return moodId
-        })
-      }
+      })
       render(filteredEntries)
-})
+    }
+  })
 
   eventHub.addEventListener("entryHasBeenEdited", e => {
     render(useEntries())
@@ -29,22 +43,22 @@ const EntryListComponent = () => {
 
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("editEntry--")) {
-        const [notUsed, entryId] = clickEvent.target.id.split("--")
+      const [notUsed, entryId] = clickEvent.target.id.split("--")
 
-        /*
-            Let all other components know that the user chose
-            to edit an entry, and attach data to the message
-            so that any listeners know which entry should be
-            edited.
-        */
-        const message = new CustomEvent("selectedEntryEdit", {
-          detail:{
-            IdOfEntry: entryId
-          }
-        })
-        eventHub.dispatchEvent(message)
+      /*
+          Let all other components know that the user chose
+          to edit an entry, and attach data to the message
+          so that any listeners know which entry should be
+          edited.
+      */
+      const message = new CustomEvent("selectedEntryEdit", {
+        detail: {
+          IdOfEntry: entryId
+        }
+      })
+      eventHub.dispatchEvent(message)
     }
-})
+  })
 
   eventHub.addEventListener("entryCreated", () => {
     render(useEntries())
@@ -57,7 +71,7 @@ const EntryListComponent = () => {
     }
   })
 
-  const render = entryCollection => {
+  const render = (entryCollection) => {
     entryLog.innerHTML = `
       <section class="allJournalEntries">
         <hr/>
@@ -69,7 +83,7 @@ const EntryListComponent = () => {
         }).join("")
       }
       </section>`
-    }
+  }
   render(entries)
 }
 
